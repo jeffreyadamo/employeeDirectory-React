@@ -1,0 +1,13 @@
+.littleLine {
+    background: red;
+    height: 10px;
+}
+
+.jumbotron {
+    margin-bottom: 0 !important;
+    padding: 2rem 2rem !important;
+}
+
+.centering {
+    text-align: center;
+}
