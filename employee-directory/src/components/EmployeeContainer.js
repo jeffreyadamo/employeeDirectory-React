@@ -7,6 +7,8 @@ import SearchForm from "./SearchForm";
 import MovieDetail from "./MovieDetail";
 import API from "../utils/API";
 import Jumbotron from "./Jumbotron";
+import InfoRow from "./InfoRow";
+import Legend from "./Legend";
 
 class EmployeeContainer extends Component {
     state = {
@@ -41,29 +43,19 @@ class EmployeeContainer extends Component {
         return (
             <Container>
                 <Row>
-                    <div className="col md-4 d-flex justify-content-center">
-                     <SearchForm />
-                    </div>
+                    <SearchForm />
                 </Row>
                 <hr />
                 <Row>
-                        <div className="col md-4 offset1 centering">
-                            Image
-                        </div> 
-                        <div className="col md-2 centering">
-                            Name
-                        </div>
-                        <div className="col md-2 centering">
-                            Phone
-                        </div>
-                        <div className="col md-2 centering">
-                            Email
-                        </div>
-                        <div className="col md-2 centering">
-                            DOB
-                        </div>
+                    <Legend />
                 </Row>
                 <hr />
+                <InfoRow color="even"/>
+
+                <InfoRow color="odd"/>
+                <InfoRow color="even"/>
+
+
             </Container>
         )
     }

@@ -10,4 +10,14 @@
 
 .centering {
     text-align: center;
+    margin: auto;
+}
+
+.infoRow {
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.even {
+    background-color: lightgray;
 }
