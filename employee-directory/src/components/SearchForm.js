@@ -1,6 +1,7 @@
 import React from "react";
 
 function SearchForm(props) {
+  const value = props.value;
   return (
     <div className="col md-4 d-flex justify-content-center">
       <form>
@@ -21,6 +22,7 @@ function SearchForm(props) {
           </button> */}
         </div>
       </form>
+      <p>{value}</p>
     </div>
   );
 }

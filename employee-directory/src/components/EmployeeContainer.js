@@ -9,11 +9,13 @@ import API from "../utils/API";
 import Jumbotron from "./Jumbotron";
 import InfoRow from "./InfoRow";
 import Legend from "./Legend";
+import employeeList from "../utils/employeeList.json";
 
 class EmployeeContainer extends Component {
     state = {
-        result: {},
-        search: ""
+        employeeList
+        // result: {},
+        // search: ""
       };
 
     componentDidMount() {
@@ -36,24 +38,34 @@ class EmployeeContainer extends Component {
 
     handleFormSubmit = event => {
         event.preventDefault();
-        this.searchMovies(this.state.search);
+        this.searchEmployees(this.state.search);
       };
 
     render() {
         return (
             <Container>
                 <Row>
-                    <SearchForm />
+                    <SearchForm value={this.handleInputChange}/>
                 </Row>
                 <hr />
                 <Row>
                     <Legend />
                 </Row>
                 <hr />
-                <InfoRow color="even"/>
+                {this.state.employeeList.map(emp => (
+                <InfoRow 
+                    image = {emp.picture.medium}
+                    firstName = {emp.name.first}
+                    lastName = {emp.name.last}
+                    phone = {emp.phone}
+                    email = {emp.email}
+                    dob = {emp.dob.date}
+                    color = "odd"
+                    />
+                ))}
 
-                <InfoRow color="odd"/>
-                <InfoRow color="even"/>
+                // <InfoRow color="odd"/>
+                // <InfoRow color="even"/>
 
 
             </Container>
