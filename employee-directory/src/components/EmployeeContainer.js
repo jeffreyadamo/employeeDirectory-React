@@ -13,18 +13,23 @@ import employeeList from "../utils/employeeList.json";
 
 class EmployeeContainer extends Component {
     state = {
-        employeeList
-        // result: {},
-        // search: ""
+        search: "",
+        employeeList: employeeList,
+        results: []
       };
 
     componentDidMount() {
-    this.searchEmployees("The Matrix");
+        this.setState({ results: API.search(employeeList)});
+        
+        // .then(res => console.log(res))
+        // .catch(err => console.log(err));
+        console.log(this.state.results);
     }
 
+    
     searchEmployees = query => {
         API.search(query)
-          .then(res => this.setState({ result: res.data }))
+          .then(res => this.setState({ results: res.data }))
           .catch(err => console.log(err));
       };
 
