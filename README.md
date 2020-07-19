@@ -56,7 +56,7 @@ Features include:
 
 ## Usage
 
-Visit [EmployeeDirectory on GitHubPages](#) or run **npm start** to load the React application on localhost 3000. 
+Visit [EmployeeDirectory on GitHubPages](https://jeffreyadamo.github.io/employeeDirectory-React/) or run **npm start** to load the React application on localhost 3000. 
 
 The user should be able to  
 1) Sort the table by employee's first name
