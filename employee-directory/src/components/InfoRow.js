@@ -6,7 +6,7 @@ function InfoRow (props) {
 
     return (
         <Row>
-            <div className={`${props.color} col-12 d-flex justify-content-center infoRow`}>
+            <div key={props.index} className={`${props.color} col-12 d-flex justify-content-center infoRow`}>
                 <div className="col-md-2 centering">
                     <img alt="" src={props.image} />
                 </div> 

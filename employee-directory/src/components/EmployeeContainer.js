@@ -14,51 +14,66 @@ import employeeList from "../utils/employeeList.json";
 class EmployeeContainer extends Component {
     state = {
         search: "",
-        employeeList: employeeList,
+        employees: employeeList,
         results: []
       };
 
     componentDidMount() {
-        this.setState({ results: API.search(employeeList)});
-        
-        // .then(res => console.log(res))
-        // .catch(err => console.log(err));
-        console.log(this.state.results);
+        API.sortByAlphabet(employeeList)
+        // this will display employees alphabetically
+        this.setState({ results: API.sortByAlphabet(employeeList)});
     }
 
-    
-    searchEmployees = query => {
-        API.search(query)
-          .then(res => this.setState({ results: res.data }))
-          .catch(err => console.log(err));
-      };
+    // trying to import this isn't working:
+    getFilter = (query) => { 
+        const results = employeeList.filter((obj) => {
+         return Object.keys(obj).reduce((acc, curr) => {
+              return acc || obj[curr].toLowerCase().includes(query);
+        },
+        false);
+         })
+        console.log(results); 
+    }
+
+    ///
+    // const findMe="Jut";
+        // findMe = findMe.toLowerCase()
+    // console.log(findMe);
+    searchEmployees = (employeeList, name) => {
+        var results;    
+        name = name.toUpperCase();    
+        results = employeeList.filter(function(emp) {
+            console.log(emp.first)
+            return emp.name.first.toUpperCase().indexOf(name) !== -1;
+        });
+        console.log(results);
+        return results;
+    }
+
 
     handleInputChange = event => {
-    const value = event.target.value;
-    const name = event.target.name;
-    this.setState({
-        [name]: value
-    });
+        this.searchEmployees(employeeList, event.target.value)
+        this.setState({ search: event.target.value });
+        this.setState({ results: this.searchEmployees(employeeList, event.target.value)})
     };
 
-    handleFormSubmit = event => {
-        event.preventDefault();
-        this.searchEmployees(this.state.search);
-      };
-
     render() {
+
         return (
             <Container>
                 <Row>
-                    <SearchForm value={this.handleInputChange}/>
+                    <SearchForm 
+                        handleInputChange= {this.handleInputChange}
+                        value={this.search}/>
                 </Row>
                 <hr />
                 <Row>
                     <Legend />
                 </Row>
                 <hr />
-                {this.state.employeeList.map(emp => (
+                {this.state.results.map((emp, index) => (
                 <InfoRow 
+                    key = {index}
                     image = {emp.picture.medium}
                     firstName = {emp.name.first}
                     lastName = {emp.name.last}
@@ -67,7 +82,8 @@ class EmployeeContainer extends Component {
                     dob = {emp.dob.date}
                     color = "odd"
                     />
-                ))}
+                )
+                )}
 
                 // <InfoRow color="odd"/>
                 // <InfoRow color="even"/>
