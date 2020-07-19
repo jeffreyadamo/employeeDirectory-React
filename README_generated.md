@@ -1,3 +1,94 @@
+# Employee Directory (React)
+
+Jeffrey Adamo  
+UW Full Stack BootCamp - Week 19   
+[Employee Directory (React)](https://github.com/jeffreyadamo/employeeDirectory-React) at GitHub Pages  
+![MIT](https://img.shields.io/badge/license-MIT-green)  
+***
+
+<img style="width:50%" src="./public/employeeDirectoryDemo.gif">  
+
+## Description
+
+ Search for employees by their first name using a search box to filter a list of 200 employees. The user can also sort alphabetically by first name. This application is designed using React's JSX JavaScript library.
+
+Features include:
+* React JSX JavaScript library
+* Setting state
+* Sorting array of objects alphabetically
+* Searching array of objects using state
+
+
+
+
+
+### User Story
+```
+ AS AN employee manager 
+ I WANT TO be able to view my entire employee directory at once
+ SO THAT I have quick access to their information 
+ ```
+## Table of Contents
+
+* [Installation](#installation)
+
+* [Usage](#usage)
+
+* [License](#license)
+
+* [Contributing](#contributing)
+
+* [Tests](#tests)
+
+* [Questions](#questions)
+
+* [React](#react)
+
+## Installation
+
+#### Please run the following for local hosting:
+
+* Clone from the [GitHub repo](https://github.com/jeffreyadamo/employeeDirectory-React)  
+* run **npm install** in the cloned directory
+* run **npm start**
+
+
+
+## Usage
+
+Visit [EmployeeDirectory on GitHubPages](#) or run **npm start** to load the React application on localhost 3000. 
+
+The user should be able to  
+1) Sort the table by employee's first name
+2) Filter the users by first name
+## License
+
+![MIT](https://img.shields.io/badge/license-MIT-green)
+
+## Contributing
+
+Leave an issue at my GitHub page.
+
+## Tests
+
+### To run tests, run the following command:
+
+
+none
+
+
+## Questions
+
+For questions, open an issue or contact my GitHub  
+
+
+<img src="https://avatars3.githubusercontent.com/u/58490053?v=4" width="75">    
+
+@ [jeffreyadamo](http://www.github.com/jeffreyadamo)  
+
+<hr/> 
+
+## React
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,3 +157,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+ 
