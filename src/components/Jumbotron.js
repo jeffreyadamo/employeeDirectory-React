@@ -5,7 +5,7 @@ function Jumbotron() {
   return (
     <div>
       <div className="jumbotron">
-        <h1 className="display-4 d-flex justify-content-center">
+        <h1 className="display-4 d-flex justify-content-center bebas">
           Employee Directory
         </h1>
         <br />

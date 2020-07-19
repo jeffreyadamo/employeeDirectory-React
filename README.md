@@ -2,7 +2,7 @@
 
 Jeffrey Adamo  
 UW Full Stack BootCamp - Week 19   
-[Employee Directory (React)](https://github.com/jeffreyadamo/employeeDirectory-React) at GitHub Pages  
+[Employee Directory (React)](https://jeffreyadamo.github.io/employeeDirectory-React/) at GitHub Pages  
 ![MIT](https://img.shields.io/badge/license-MIT-green)  
 ***
 

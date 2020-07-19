@@ -11,7 +11,9 @@ function Legend(props) {
         onMouseEnter={() => setIsShown(true)}
         onMouseLeave={() => setIsShown(false)}
       >
-        Name
+        Name &nbsp;
+        <div className="float-right"> &nbsp;</div>
+        <i class="fa fa-caret-down" aria-hidden="true"> &nbsp;</i>
         {isShown && (
           <button type="button" className="btn btn-info" onClick={props.clicky}>
             Sort
