@@ -1,6 +1,6 @@
 import React from "react";
 import Jumbotron from "./components/Jumbotron";
-import EmployeeContainer from "./components/EmployeeContainer"
+import EmployeeContainer from "./components/EmployeeContainer";
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <Jumbotron />
       <EmployeeContainer />
     </div>
-  )
+  );
 }
 
 export default App;

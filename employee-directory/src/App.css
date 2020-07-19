@@ -1,23 +1,31 @@
 .littleLine {
-    background: red;
-    height: 10px;
+  background: red;
+  height: 10px;
 }
 
 .jumbotron {
-    margin-bottom: 0 !important;
-    padding: 2rem 2rem !important;
+  margin-bottom: 0 !important;
+  padding: 2rem 2rem !important;
 }
 
 .centering {
-    text-align: center;
-    margin: auto;
+  text-align: center;
+  margin: auto;
 }
 
 .infoRow {
-    padding-top:10px;
-    padding-bottom:10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .even {
-    background-color: lightgray;
+  background-color: lightgray;
+}
+
+body {
+  background-color: #ffd615;
+}
+
+.container {
+  background-color: #f5f5f5;
 }
